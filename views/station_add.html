@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- 引入样式文件和动态控制 -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.7/esri/css/main.css">
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+    <link href="/stylesheets/add.css" rel="stylesheet" />
+    <title><%= title %></title>
+</head>
+<body>
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a class="icon-bar" href="/admin">主页</a></li>
+                <li class="active"><a href="#">增加站点</a></li>
+                <li><a href="/admin/station_edit">编辑站点信息</a></li>
+                <li><a href="/admin/route_add">增加线路</a></li>
+                <li><a href="/admin/route_edit">编辑线路信息</a></li>
+                <li><a href="/admin/user_edit">用户管理</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a style="cursor: default">欢迎你，<%= admin %></a>
+                </li>
+                <li><a href="/admin_login">退出登录</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+            <a href="/admin" class="list-group-item">
+                <span class="glyphicon glyphicon-home"></span>主页
+            </a>
+            <a href="#" class="list-group-item active">
+                <!-- 小图标样式设置 -->
+                <span class="glyphicon glyphicon-plus" aria-hidden="true">
+                    </span>增加站点</a>
+            <a href="/admin/station_edit" class="list-group-item">
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true">
+                    </span>编辑站点信息</a>
+            <a href="/admin/route_add" class="list-group-item">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true">
+                    </span>增加线路</a>
+            <a href="/admin/route_edit" class="list-group-item">
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true">
+                    </span>编辑线路信息</a>
+            <a href="/admin/user_edit" class="list-group-item">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true">
+                    </span>普通用户管理</a>
+        </div>
+        <!--左边菜单栏-->
+        <div class="col-sm-10">
+            <ol class="breadcrumb">
+                <li class="active">菜单
+                </li>
+                <li class="active">增加站点
+                </li>
+            </ol>
+            <div class="container" id="container"></div>
+            <div class="panel panel-default" id="add-station">
+                <div class="panel-heading">添加站点</div>
+                <div class="panel-body">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <button class="btn btn-warning" style="margin-right: 5px;">开始绘制</button>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">站点名称</label>
+                            <input type="text" class="form-control" id="name" placeholder="请输入名称">
+                        </div>
+                        <div class="form-group">
+                            <label for="route">途径线路</label>
+                            <input type="text" class="form-control" id="route" placeholder="格式：xx路、xx路">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-danger" style="margin-left: 5px;">提交</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--黑屏效果-->
+<div class="black-screen"></div>
+</body>
+<script src="https://js.arcgis.com/4.7/"></script>
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+<script src="/javascripts/station_add.js"></script>
+</html>

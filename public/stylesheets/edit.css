@@ -1,0 +1,62 @@
+html,body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.visible {
+    visibility: visible;
+}
+.hidden {
+    visibility: hidden;
+}
+.pagination {
+    float: right;
+    visibility: hidden;
+}
+#pagination {
+    overflow: hidden;
+    white-space: nowrap;
+    height: 34px;
+    width: 170px;
+    margin: 20px 0;
+}
+#pagination li {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+}
+.arrow {
+    cursor: pointer;
+}
+.table {
+    /*height: 343px;*/
+}
+.edit {
+    display: none;
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 100%;
+    transition: top 1s linear;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.edit-active {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: top 1s linear;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+.edit-data {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60%;
+    width: 40%;
+    margin: auto;
+}

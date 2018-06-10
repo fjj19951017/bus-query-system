@@ -1,0 +1,254 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    color: #fff;
+}
+.nav {
+    height: 38px;
+    line-height: 38px;
+    background-image: linear-gradient(-180deg,#393939,#2d2d2d);
+    font-size: 16px;
+    color: #b7b7b7;
+    padding-left: 50px;
+}
+#main {
+    position: absolute;
+    top: 38px;
+    bottom: 0;
+    width : 100%;
+}
+#container {
+    height: 100%;
+}
+#menu {
+    float: left;
+    height: 100%;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.title {
+    width: 100%;
+    height: 42px;
+    font-size: 14px;
+    line-height: 42px;
+    padding-left: 44px;
+    background-color: #303030;
+    border-bottom: 1px solid #7f7f7f;
+}
+.list {
+    margin: 0;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.05s linear;
+}
+.list-appear {
+    margin: 10px 0;
+    padding: 0;
+    height: 80px;
+    transition: height 0.05s linear;
+}
+.list-item {
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    padding: 0;
+}
+.list-item-active {
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    padding: 0;
+    background-color: #545454;
+    cursor: pointer;
+}
+.title:hover, .list-item:hover {
+    cursor: pointer;
+    background-color: #545454;
+}
+.search {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    bottom: 0;
+    width: 300px;
+    padding: 10px 14px 14px 14px;
+    background-color: #545454;
+}
+.search-title {
+    box-sizing: content-box;
+    height: 18px;
+    line-height: 18px;
+    font-size: 13px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #7f7f7f;
+}
+.icon {
+    display: inline-block;
+    height: 13px;
+    width: 3px;
+    margin-right: 15px;
+    background-color: #0e90d2;
+}
+.search-body {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #7f7f7f;
+    height: 100px;
+}
+.show-up {
+    position: relative;
+    height: 40px;
+}
+.show-up input[type="checkbox"] {
+    position: absolute;
+    top: 13px;
+    left: 16px;
+    margin: 0;
+    padding: 0;
+    height: 14px;
+    width: 14px;
+    cursor: pointer;
+}
+.name {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    height: 40px;
+    width: 84px;
+    line-height: 40px;
+}
+.close-icon {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    height: 14px;
+    width: 14px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.search-input {
+    margin-top: 15px;
+    padding-left: 16px;
+    color: #000;
+}
+.search-result {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    overflow: auto;
+}
+.search-result-list-item {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #7f7f7f;
+    cursor: pointer;
+}
+.user {
+    display: inline-block;
+    float: right;
+    height: 38px;
+    /*width: 100px;*/
+    padding-right: 20px;
+    line-height: 38px;
+    text-align: right;
+    cursor: pointer;
+}
+.logout {
+    visibility: hidden;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 40px;
+}
+.logout-triangle {
+    position: absolute;
+    top: -6px;
+    left: 37px;
+    width: 0;
+    height: 0;
+    border: 6px solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.5) transparent;
+}
+.logout-body {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 80px;
+    height: 34px;
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: 34px;
+    text-align: center;
+}
+.logout-body a {
+    color: #fff;
+}
+.logout-body a:hover {
+    color: #c3c3c3;
+}
+.label {
+    cursor: pointer;
+}
+.search-body-2 {
+    display: none;
+    position: relative;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #7f7f7f;
+}
+.input-group {
+    margin: 10px;
+}
+.autoFinish-1 {
+    position: absolute;
+    left: 63px;
+    top: 34px;
+    width: 199px;
+    z-index: 2;
+    color: #000;
+    background-color: #fff;
+}
+.autoFinish-2 {
+    position: absolute;
+    left: 63px;
+    top: 34px;
+    width: 199px;
+    height: 80px;
+    z-index: 2;
+    color: #000;
+    background-color: #fff;
+    overflow: auto;
+}
+.autoFinish-3 {
+    position: absolute;
+    left: 63px;
+    top: 78px;
+    width: 199px;
+    z-index: 2;
+    color: #000;
+    background-color: #fff;
+}
+.autoFinish-4 {
+    position: absolute;
+    left: 63px;
+    top: 78px;
+    width: 199px;
+    height: 80px;
+    z-index: 2;
+    color: #000;
+    background-color: #fff;
+    overflow: auto;
+}
+.autoFinish-resultList {
+    height: 20px;
+    padding: 2px;
+    cursor: default;
+}
+.autoFinish-resultList:hover {
+    background-color: #9ccff4;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.7/esri/css/main.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/index.css">
+</head>
+<body>
+<nav class="nav">
+    <span>大学城公交查询系统</span>
+    <div class="user">
+        <span class="glyphicon glyphicon-user" ></span>
+        <%= user %>
+    </div>
+</nav>
+<div id="main">
+    <div class="logout">
+        <div class="logout-triangle"></div>
+        <div class="logout-body">
+            <a href="/">退出登录</a>
+        </div>
+    </div>
+    <div id="menu">
+        <div id="title-1" class="title">
+            <span class="glyphicon glyphicon-search" style="margin-right: 10px;"></span>
+            <span>查询</span>
+        </div>
+        <ul id="list-1" class="list">
+            <li class="list-item">站点查询</li>
+            <li class="list-item">线路查询</li>
+        </ul>
+        <div id="title-2" class="title">
+            <span class="glyphicon glyphicon-road" style="margin-right: 10px;"></span>
+            <span>乘车规划</span>
+        </div>
+        <ul id="list-2" class="list">
+            <li class="list-item">最短路程</li>
+            <!--<li class="list-item">最少花费</li>-->
+            <!--<li class="list-item">最少换乘次数</li>-->
+        </ul>
+    </div>
+    <div id="container" tabindex="0"></div>
+    <div id="search" class="search">
+        <div class="close-icon">
+            <span class="glyphicon glyphicon-remove"></span>
+        </div>
+        <div class="search-title">
+            <span class="icon"></span>
+            <span id="search-title-id"></span>
+        </div>
+        <div class="search-body">
+            <div class="show-up">
+                <input id="show-station" type="checkbox" checked="checked" />
+                <div class="name">显示所有站点</div>
+            </div>
+            <div class="search-input">
+                <input type="text" id="search-station" />
+                <button class="btn btn-primary" id="search-station-ok" style="margin-left: 10px;">搜索</button>
+            </div>
+        </div>
+        <div class="search-body-2">
+            <div class="input-group">
+                <span class="input-group-addon">起点</span>
+                <input type="text" class="form-control" placeholder="公交站点" id="route-start-1" />
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">终点</span>
+                <input type="text" class="form-control" placeholder="公交站点" id="route-end-1" />
+            </div>
+            <button class="btn btn-primary" id="search-route-ok" style="margin-left: 10px;">搜索</button>
+        </div>
+        <div class="search-result"></div>
+    </div>
+</div>
+</body>
+<script src="https://js.arcgis.com/4.7/"></script>
+<script type="text/javascript" src="javascripts/index.js">
+</script>
+</html>
